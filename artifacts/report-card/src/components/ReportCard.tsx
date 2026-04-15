@@ -263,7 +263,7 @@ export default function ReportCard() {
           width: '100%',
           borderCollapse: 'collapse',
           marginTop: '18px',
-          border: '1px solid #000000',
+          border: '2px solid #000000',
           fontSize: '11px',
         }}
       >
@@ -350,7 +350,7 @@ export default function ReportCard() {
       </table>
 
       {/* Grade Scale */}
-      <div style={{ border: '1px solid #000000', marginTop: '18px', overflow: 'hidden' }}>
+      <div style={{ border: '2px solid #000000', marginTop: '18px', overflow: 'hidden' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '11px' }}>
           <tbody>
             {[
