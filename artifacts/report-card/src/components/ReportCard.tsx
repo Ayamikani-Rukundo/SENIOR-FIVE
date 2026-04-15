@@ -145,7 +145,7 @@ export default function ReportCard() {
         <tbody>
           {/* BEHAVIOUR row */}
           <tr style={{ backgroundColor: HEADER_GRAY }}>
-            <TD left bold style={{ backgroundColor: HEADER_GRAY, textDecoration: 'underline', ...cellBorder }}>
+            <TD left bold style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}>
               BEHAVIOUR
             </TD>
             <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
@@ -187,8 +187,11 @@ export default function ReportCard() {
           <SubjectRow name="ENGLISH"     max={[30,30,60]} t1={[21.5,27.5,49.0,'B']} t2={[21.6,25.0,46.6,'C']} t3={[26.3,18.5,44.8,'C']} gen={[180,140.4,78.0,'C']} />
           <SubjectRow name="FRENCH"      max={[30,30,60]} t1={[18.0,17.0,35.0,'E']} t2={[15.8,18.0,33.8,'E']} t3={[18.0,18.0,36.0,'D']} gen={[180,104.8,58.2,'E']} />
 
+          {/* Gray separator between last subject and totals */}
+          <SectionDivider cols={21} />
+
           {/* GENERAL TOTAL row */}
-          <tr style={{ borderTop: '2px solid #000000' }}>
+          <tr>
             <TD bold left style={{ ...cellBorder }}>GENERAL TOTAL</TD>
             <TD style={cellBorder}>360</TD>
             <TD style={cellBorder}>360</TD>
@@ -472,7 +475,6 @@ function SectionHeader({ label, cols }: { label: string; cols: number }) {
           textAlign: 'left',
           paddingLeft: '4px',
           fontWeight: 'bold',
-          textDecoration: 'underline',
           backgroundColor: SECTION_DARK,
           borderTop: '2px solid #000000',
           borderBottom: '2px solid #000000',
@@ -481,6 +483,24 @@ function SectionHeader({ label, cols }: { label: string; cols: number }) {
       >
         {label}
       </td>
+    </tr>
+  );
+}
+
+function SectionDivider({ cols }: { cols: number }) {
+  return (
+    <tr>
+      <td
+        colSpan={cols}
+        style={{
+          ...cellBase,
+          backgroundColor: SECTION_DARK,
+          borderTop: '2px solid #000000',
+          borderBottom: '2px solid #000000',
+          height: '8px',
+          padding: 0,
+        }}
+      />
     </tr>
   );
 }
