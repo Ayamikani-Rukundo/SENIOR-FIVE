@@ -127,14 +127,13 @@ export default function ReportCard() {
             <TH style={{ width: '22px', backgroundColor: HEADER_GRAY, ...cellBorder }}>GR</TH>
           </tr>
 
-          {/* Row 3: max values row — 11 cells filling open slots: col4, col5, col6, col9, col10, col13, col14, col17, col18, col19, col20 */}
+          {/* Row 3: max values row */}
           <tr>
             <TH style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}>40</TH>
             <TH style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TH>
+            <TH style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}>40</TH>
             <TH style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TH>
-            <TH style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TH>
-            <TH style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TH>
-            <TH style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TH>
+            <TH style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}>40</TH>
             <TH style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TH>
             <TH style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}>120</TH>
             <TH style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}>120</TH>
@@ -144,35 +143,31 @@ export default function ReportCard() {
         </thead>
 
         <tbody>
-          {/* BEHAVIOUR row — white bg, 40 in each term's TOT column */}
-          <tr>
-            <TD left bold style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}>BEHAVIOUR</TD>
-            {/* MAXIMUM: CAT, EX blank; TOT max shown in header row 3 */}
-            <TD style={{ ...cellBorder }}></TD>
-            <TD style={{ ...cellBorder }}></TD>
-            <TD style={{ ...cellBorder }}></TD>
-            {/* 1st Term: CAT, EX blank; TOT=40 max; GR blank */}
-            <TD style={{ ...cellBorder }}></TD>
-            <TD style={{ ...cellBorder }}></TD>
-            <TD bold style={{ ...cellBorder }}>40</TD>
-            <TD style={{ ...cellBorder }}></TD>
-            {/* 2nd Term */}
-            <TD style={{ ...cellBorder }}></TD>
-            <TD style={{ ...cellBorder }}></TD>
-            <TD bold style={{ ...cellBorder }}>40</TD>
-            <TD style={{ ...cellBorder }}></TD>
-            {/* 3rd Term */}
-            <TD style={{ ...cellBorder }}></TD>
-            <TD style={{ ...cellBorder }}></TD>
-            <TD bold style={{ ...cellBorder }}>40</TD>
-            <TD style={{ ...cellBorder }}></TD>
-            {/* GENERAL TOTAL: max values shown in header row 3 */}
-            <TD style={{ ...cellBorder }}></TD>
-            <TD style={{ ...cellBorder }}></TD>
-            <TD style={{ ...cellBorder }}></TD>
-            <TD style={{ ...cellBorder }}></TD>
-            {/* 2nd Sittin % */}
-            <TD style={{ ...cellBorder }}></TD>
+          {/* BEHAVIOUR row */}
+          <tr style={{ backgroundColor: HEADER_GRAY }}>
+            <TD left bold style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}>
+              BEHAVIOUR
+            </TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD bold style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}>40</TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
+            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
           </tr>
 
           {/* CORE */}
