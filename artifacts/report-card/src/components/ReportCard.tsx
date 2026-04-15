@@ -150,7 +150,7 @@ export default function ReportCard() {
             </TD>
             <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
             <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
-            <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}>40</TD>
+            <TD bold style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}>40</TD>
             <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
             <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
             <TD style={{ backgroundColor: HEADER_GRAY, ...cellBorder }}></TD>
@@ -193,25 +193,25 @@ export default function ReportCard() {
           {/* GENERAL TOTAL row */}
           <tr>
             <TD bold left style={{ ...cellBorder }}>GENERAL TOTAL</TD>
-            <TD style={cellBorder}>360</TD>
-            <TD style={cellBorder}>360</TD>
-            <TD style={{ ...cellBorder }}>720</TD>
-            <TD style={cellBorder}>315.4</TD>
-            <TD style={cellBorder}>314.0</TD>
-            <TD style={cellBorder}>629.4</TD>
-            <TD style={{ ...cellBorder }}></TD>
-            <TD style={cellBorder}>281.7</TD>
-            <TD style={cellBorder}>272.2</TD>
-            <TD style={cellBorder}>553.7</TD>
-            <TD style={{ ...cellBorder }}></TD>
-            <TD style={cellBorder}>300.6</TD>
-            <TD style={cellBorder}>306.0</TD>
-            <TD style={cellBorder}>606.7</TD>
-            <TD style={{ ...cellBorder }}></TD>
-            <TD style={cellBorder}>2160</TD>
-            <TD style={cellBorder}>1789.8</TD>
-            <TD style={cellBorder}>82.8</TD>
-            <TD style={{ ...cellBorder }}></TD>
+            <TD bold style={cellBorder}>360</TD>
+            <TD bold style={cellBorder}>360</TD>
+            <TD bold style={{ ...cellBorder }}>720</TD>
+            <TD bold style={cellBorder}>315.4</TD>
+            <TD bold style={cellBorder}>314.0</TD>
+            <TD bold style={cellBorder}>629.4</TD>
+            <TD bold style={{ ...cellBorder }}></TD>
+            <TD bold style={cellBorder}>281.7</TD>
+            <TD bold style={cellBorder}>272.2</TD>
+            <TD bold style={cellBorder}>553.7</TD>
+            <TD bold style={{ ...cellBorder }}></TD>
+            <TD bold style={cellBorder}>300.6</TD>
+            <TD bold style={cellBorder}>306.0</TD>
+            <TD bold style={cellBorder}>606.7</TD>
+            <TD bold style={{ ...cellBorder }}></TD>
+            <TD bold style={cellBorder}>2160</TD>
+            <TD bold style={cellBorder}>1789.8</TD>
+            <TD bold style={cellBorder}>82.8</TD>
+            <TD bold style={{ ...cellBorder }}></TD>
             <TD style={cellBorder}></TD>
           </tr>
 
@@ -219,10 +219,10 @@ export default function ReportCard() {
           <tr>
             <TD bold left style={{ ...cellBorder }}>PERCENTAGE</TD>
             <TD colSpan={3} style={{ ...cellBorder }}></TD>
-            <TD colSpan={4} style={{ ...cellBorder }}>87.4%</TD>
-            <TD colSpan={4} style={{ ...cellBorder }}>76.9%</TD>
-            <TD colSpan={4} style={{ ...cellBorder }}>84.2%</TD>
-            <TD colSpan={4} style={{ ...cellBorder }}>82.8%</TD>
+            <TD bold colSpan={4} style={{ ...cellBorder, textAlign: 'right', paddingRight: '4px' }}>87.4%</TD>
+            <TD bold colSpan={4} style={{ ...cellBorder, textAlign: 'right', paddingRight: '4px' }}>76.9%</TD>
+            <TD bold colSpan={4} style={{ ...cellBorder, textAlign: 'right', paddingRight: '4px' }}>84.2%</TD>
+            <TD bold colSpan={4} style={{ ...cellBorder, textAlign: 'right', paddingRight: '4px' }}>82.8%</TD>
             <TD style={cellBorder}></TD>
           </tr>
 
@@ -230,10 +230,10 @@ export default function ReportCard() {
           <tr>
             <TD bold left style={{ ...cellBorder }}>POSITION</TD>
             <TD colSpan={3} style={{ ...cellBorder }}></TD>
-            <TD colSpan={4} style={{ ...cellBorder }}>1 out of 41</TD>
-            <TD colSpan={4} style={{ ...cellBorder }}>1 out of 42</TD>
-            <TD colSpan={4} style={{ ...cellBorder }}>1 out of 42</TD>
-            <TD colSpan={4} style={{ ...cellBorder }}>1 out of 42</TD>
+            <TD bold colSpan={4} style={{ ...cellBorder, textAlign: 'right', paddingRight: '4px' }}>1 out of 41</TD>
+            <TD bold colSpan={4} style={{ ...cellBorder, textAlign: 'right', paddingRight: '4px' }}>1 out of 42</TD>
+            <TD bold colSpan={4} style={{ ...cellBorder, textAlign: 'right', paddingRight: '4px' }}>1 out of 42</TD>
+            <TD bold colSpan={4} style={{ ...cellBorder, textAlign: 'right', paddingRight: '4px' }}>1 out of 42</TD>
             <TD style={cellBorder}></TD>
           </tr>
 
@@ -447,7 +447,7 @@ function TD({
         ...cellBase,
         textAlign: left ? 'left' : 'center',
         paddingLeft: left ? '4px' : '3px',
-        fontWeight: 'bold',
+        fontWeight: bold ? 'bold' : 'normal',
         ...style,
       }}
     >
@@ -522,7 +522,7 @@ function SubjectRow({
 }) {
   return (
     <tr>
-      <TD left style={{ ...cellBorder }}>
+      <TD bold left style={{ ...cellBorder }}>
         {name.includes('\n')
           ? name.split('\n').map((l, i, arr) => (
               <span key={i}>{l}{i < arr.length - 1 && <br />}</span>
@@ -530,9 +530,9 @@ function SubjectRow({
           : name}
       </TD>
 
-      <TD style={cellBorder}>{max[0]}</TD>
-      <TD style={cellBorder}>{max[1]}</TD>
-      <TD style={{ ...cellBorder }}>{max[2]}</TD>
+      <TD bold style={cellBorder}>{max[0]}</TD>
+      <TD bold style={cellBorder}>{max[1]}</TD>
+      <TD bold style={{ ...cellBorder }}>{max[2]}</TD>
 
       <TD style={cellBorder}>{t1[0]}</TD>
       <TD style={cellBorder}>{t1[1]}</TD>
@@ -549,10 +549,10 @@ function SubjectRow({
       <TD style={cellBorder}>{t3[2]}</TD>
       <TD style={{ ...cellBorder }}>{t3[3]}</TD>
 
-      <TD style={cellBorder}>{gen[0]}</TD>
-      <TD style={cellBorder}>{gen[1]}</TD>
-      <TD style={cellBorder}>{gen[2]}</TD>
-      <TD style={{ ...cellBorder }}>{gen[3]}</TD>
+      <TD bold style={cellBorder}>{gen[0]}</TD>
+      <TD bold style={cellBorder}>{gen[1]}</TD>
+      <TD bold style={cellBorder}>{gen[2]}</TD>
+      <TD bold style={{ ...cellBorder }}>{gen[3]}</TD>
 
       <TD style={cellBorder}></TD>
     </tr>
