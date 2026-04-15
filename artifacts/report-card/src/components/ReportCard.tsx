@@ -239,24 +239,20 @@ export default function ReportCard() {
 
           {/* Teacher's Remarks */}
           <tr>
-            <TD bold left style={{ ...cellBorder }}>Teacher's Remarks<br />&amp; Signature</TD>
-            <TD colSpan={3} style={{ ...cellBorder }}></TD>
+            <TD bold left colSpan={4} style={{ ...cellBorder }}>Teacher's Remarks<br />&amp; Signature</TD>
             <TD colSpan={4} style={{ ...cellBorder }}></TD>
             <TD colSpan={4} style={{ ...cellBorder }}></TD>
             <TD colSpan={4} style={{ ...cellBorder }}></TD>
-            <TD colSpan={4} style={{ ...cellBorder }}></TD>
-            <TD style={cellBorder}></TD>
+            <TD colSpan={5} style={{ ...cellBorder }}></TD>
           </tr>
 
           {/* Parents Signature */}
           <tr>
-            <TD bold left style={{ ...cellBorder }}>Parents Signature</TD>
-            <TD colSpan={3} style={{ ...cellBorder }}></TD>
+            <TD bold left colSpan={4} style={{ ...cellBorder }}>Parents Signature</TD>
             <TD colSpan={4} style={{ ...cellBorder }}></TD>
             <TD colSpan={4} style={{ ...cellBorder }}></TD>
             <TD colSpan={4} style={{ ...cellBorder }}></TD>
-            <TD colSpan={4} style={{ ...cellBorder }}></TD>
-            <TD style={cellBorder}></TD>
+            <TD colSpan={5} style={{ ...cellBorder }}></TD>
           </tr>
         </tbody>
       </table>
