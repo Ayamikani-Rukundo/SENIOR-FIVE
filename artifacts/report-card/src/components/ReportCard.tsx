@@ -497,8 +497,8 @@ function SectionDivider({ cols }: { cols: number }) {
           backgroundColor: SECTION_DARK,
           borderTop: '2px solid #000000',
           borderBottom: '2px solid #000000',
-          height: '8px',
-          padding: 0,
+          height: '18px',
+          padding: '2px 0',
         }}
       />
     </tr>
