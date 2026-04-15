@@ -456,7 +456,10 @@ function InfoRow({ label, value }: { label: string; value: string }) {
   return (
     <tr>
       <td style={{ fontWeight: 'bold', paddingRight: '10px', fontSize: '12px', whiteSpace: 'nowrap' }}>{label}</td>
-      <td style={{ fontSize: '12px', fontWeight: 'bold', whiteSpace: 'nowrap' }}>: {value}</td>
+      <td style={{ fontSize: '12px', whiteSpace: 'nowrap' }}>
+        <span style={{ fontWeight: 'bold' }}>: </span>
+        <span style={{ fontWeight: '900' }}>{value}</span>
+      </td>
     </tr>
   );
 }
